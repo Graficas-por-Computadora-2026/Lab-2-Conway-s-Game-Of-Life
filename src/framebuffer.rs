@@ -25,15 +25,6 @@ impl Framebuffer {
         }
     }
 
-    pub fn clear(&mut self) {
-        // limpien su buffer de colores
-        self.color_buffer = Image::gen_image_color(
-            self.width as i32,
-            self.height as i32,
-            self.background_color,
-        );
-    }
-
     pub fn set_pixel(&mut self, x: u32, y: u32) {
         // pongan un pixel en la pantalla, asegúrense de que no se pueda salir del Buffer
         if x < self.width && y < self.height {
@@ -58,11 +49,6 @@ impl Framebuffer {
     pub fn set_current_color(&mut self, color: Color) {
         // setten el color
         self.current_color = color;
-    }
-
-    pub fn render_to_file(&self, file_path: &str) {
-        // guarden su framebuffer a un archivo usando export
-        self.color_buffer.export_image(file_path);
     }
 
     pub fn swap_buffers(

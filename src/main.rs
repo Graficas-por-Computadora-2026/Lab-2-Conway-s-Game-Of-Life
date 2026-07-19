@@ -6,6 +6,11 @@ use raylib::prelude::*;
 use framebuffer::Framebuffer;
 use std::{thread, time::Duration};
 
+fn is_alive(framebuffer: &mut Framebuffer, x: i32, y: i32) -> bool {
+    let color = framebuffer.get_color(x, y);
+    color == Color::BLUE || color == Color::GREEN
+}
+
 fn render(
     framebuffer: &mut Framebuffer,
     width: u32,
@@ -20,29 +25,35 @@ fn render(
             for offset_y in -1..=1 {
                 for offset_x in -1..=1 {
                     if (offset_x != 0 || offset_y != 0)
-                        && framebuffer.get_color(x + offset_x, y + offset_y) == Color::WHITE
+                        && is_alive(framebuffer, x + offset_x, y + offset_y)
                     {
                         neighbors += 1;
                     }
                 }
             }
 
-            let alive = framebuffer.get_color(x, y) == Color::WHITE;
-            next_generation.push(matches!((alive, neighbors), (true, 2 | 3) | (false, 3)));
+            let alive = is_alive(framebuffer, x, y);
+
+            if !alive && neighbors == 3 {
+                next_generation.push(Color::GREEN);
+            } else if alive && (neighbors == 2 || neighbors == 3) {
+                next_generation.push(Color::BLUE);
+            } else {
+                next_generation.push(Color::BLACK);
+            }
         }
     }
 
     for y in 0..height {
         for x in 0..width {
-            let alive = next_generation[(y * width + x) as usize];
-            framebuffer.set_current_color(if alive { Color::WHITE } else { Color::BLACK });
+            framebuffer.set_current_color(next_generation[(y * width + x) as usize]);
             framebuffer.set_pixel(x, y);
         }
     }
 }
 
 fn initial_pattern(framebuffer: &mut Framebuffer) {
-    framebuffer.set_current_color(Color::WHITE);
+    framebuffer.set_current_color(Color::GREEN);
 
     // Agrega tus células iniciales aquí con: framebuffer.set_pixel(x, y);
 }

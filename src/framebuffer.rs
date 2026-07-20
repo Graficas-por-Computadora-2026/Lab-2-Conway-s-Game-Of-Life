@@ -55,6 +55,8 @@ impl Framebuffer {
         &self,
         window: &mut RaylibHandle,
         raylib_thread: &RaylibThread,
+        window_width: i32,
+        window_height: i32,
     ) {
         // we get the "new" data from the new buffer into texture
         if let Ok(texture) = window.load_texture_from_image(raylib_thread, &self.color_buffer) {
@@ -63,7 +65,14 @@ impl Framebuffer {
             let mut renderer = window.begin_drawing(raylib_thread);
 
             // we move the "new" data to the window (current frame)
-            renderer.draw_texture(&texture, 0, 0, Color::WHITE);
+            renderer.draw_texture_pro(
+                &texture,
+                Rectangle::new(0.0, 0.0, self.width as f32, self.height as f32),
+                Rectangle::new(0.0, 0.0, window_width as f32, window_height as f32),
+                Vector2::zero(),
+                0.0,
+                Color::WHITE,
+            );
         }
     }
 }

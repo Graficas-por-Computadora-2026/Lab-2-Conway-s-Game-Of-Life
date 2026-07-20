@@ -160,6 +160,73 @@ fn initial_pattern(framebuffer: &mut Framebuffer) {
     framebuffer.set_pixel(55, 49);
     framebuffer.set_pixel(47, 51);
     framebuffer.set_pixel(54, 51);
+
+    //cara
+    for x in 46..=55 {
+        framebuffer.set_pixel(x, 45);
+    }
+    for y in 37..=40 {
+        framebuffer.set_pixel(41, y);
+        framebuffer.set_pixel(60, y);
+    }
+    framebuffer.set_pixel(42, 41);
+    framebuffer.set_pixel(43, 42);
+    framebuffer.set_pixel(44, 43);
+    framebuffer.set_pixel(45, 44);
+    framebuffer.set_pixel(56, 44);
+    framebuffer.set_pixel(57, 43);
+    framebuffer.set_pixel(58, 42);
+    framebuffer.set_pixel(59, 41);
+
+    for x in 48..=53 {
+        framebuffer.set_pixel(x, 42);
+    }
+    for x in 45..=46 {
+        framebuffer.set_pixel(x, 37);
+        framebuffer.set_pixel(x, 39);
+    }
+    for x in 55..=56 {
+        framebuffer.set_pixel(x, 37);
+        framebuffer.set_pixel(x, 39);
+    }
+
+    framebuffer.set_pixel(44, 38);
+    framebuffer.set_pixel(47, 38);
+    framebuffer.set_pixel(54, 38);
+    framebuffer.set_pixel(57, 38);
+
+    //gliders
+    for x in 0..=1 {
+        framebuffer.set_pixel(x, 2);
+    }
+    for x in 1..=2 {
+        framebuffer.set_pixel(x, 1);
+    }
+    framebuffer.set_pixel(0, 0);
+
+    for x in 98..=99 {
+        framebuffer.set_pixel(x, 2);
+    }
+    for x in 97..=98 {
+        framebuffer.set_pixel(x, 1);
+    }
+    framebuffer.set_pixel(99, 0);
+
+    for x in 0..=1 {
+        framebuffer.set_pixel(x, 97);
+    }
+    for x in 1..=2 {
+        framebuffer.set_pixel(x, 98);
+    }
+    framebuffer.set_pixel(0, 99);
+
+    for x in 98..=99 {
+        framebuffer.set_pixel(x, 97);
+    }
+    for x in 97..=98 {
+        framebuffer.set_pixel(x, 98);
+    }
+    framebuffer.set_pixel(99, 99);
 }
 
 fn main() {
@@ -186,7 +253,7 @@ fn main() {
     framebuffer.swap_buffers(&mut window, &raylib_thread, window_width, window_height);
 
     while !window.window_should_close() {
-        thread::sleep(Duration::from_millis(1000));
+        thread::sleep(Duration::from_millis(1020));
 
         render(&mut framebuffer, framebuffer_width, framebuffer_height);
 

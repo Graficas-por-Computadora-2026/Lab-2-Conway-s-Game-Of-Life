@@ -253,7 +253,7 @@ fn main() {
     framebuffer.swap_buffers(&mut window, &raylib_thread, window_width, window_height);
 
     while !window.window_should_close() {
-        thread::sleep(Duration::from_millis(200));
+        thread::sleep(Duration::from_millis(1000));
 
         render(&mut framebuffer, framebuffer_width, framebuffer_height);
 

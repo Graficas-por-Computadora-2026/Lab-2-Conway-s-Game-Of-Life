@@ -56,144 +56,144 @@ fn initial_pattern(framebuffer: &mut Framebuffer) {
     framebuffer.set_current_color(Color::GREEN);
 
     //y
-    framebuffer.set_pixel(28, 54);
-    framebuffer.set_pixel(29, 55);
-    framebuffer.set_pixel(30, 56);
-    framebuffer.set_pixel(31, 55);
-    framebuffer.set_pixel(31, 57);
-    framebuffer.set_pixel(32, 54);
-    framebuffer.set_pixel(32, 58);
+    framebuffer.set_pixel(27, 54);
+    framebuffer.set_pixel(28, 55);
+    framebuffer.set_pixel(29, 56);
+    framebuffer.set_pixel(30, 55);
+    framebuffer.set_pixel(30, 57);
+    framebuffer.set_pixel(31, 54);
+    framebuffer.set_pixel(31, 58);
 
-    framebuffer.set_pixel(69, 58);
-    framebuffer.set_pixel(69, 54);
-    framebuffer.set_pixel(70, 57);
-    framebuffer.set_pixel(70, 55);
-    framebuffer.set_pixel(71, 56);
-    framebuffer.set_pixel(72, 55);
-    framebuffer.set_pixel(73, 54);
+    framebuffer.set_pixel(68, 58);
+    framebuffer.set_pixel(68, 54);
+    framebuffer.set_pixel(69, 57);
+    framebuffer.set_pixel(69, 55);
+    framebuffer.set_pixel(70, 56);
+    framebuffer.set_pixel(71, 55);
+    framebuffer.set_pixel(72, 54);
 
     //l
-    for x in 34..=36 {
+    for x in 33..=35 {
         framebuffer.set_pixel(x, 58);
     }
 
-    for x in 65..=67 {
+    for x in 64..=66 {
         framebuffer.set_pixel(x, 58);
     }
 
     for y in 54..=57 {
-        framebuffer.set_pixel(36, y);
+        framebuffer.set_pixel(35, y);
 
-        framebuffer.set_pixel(65, y);
+        framebuffer.set_pixel(64, y);
     }
 
     //i
-    for x in 38..=40 {
+    for x in 37..=39 {
         framebuffer.set_pixel(x, 54);
         framebuffer.set_pixel(x, 58);
     }
 
-    for x in 61..=63 {
+    for x in 60..=62 {
         framebuffer.set_pixel(x, 54);
         framebuffer.set_pixel(x, 58);
     }
 
     for y in 55..=57 {
-        framebuffer.set_pixel(39, y);
+        framebuffer.set_pixel(38, y);
 
-        framebuffer.set_pixel(62, y);
+        framebuffer.set_pixel(61, y);
     }
 
     //m
     for y in 54..=58 {
-        framebuffer.set_pixel(42, y);
-        framebuffer.set_pixel(46, y);
+        framebuffer.set_pixel(41, y);
+        framebuffer.set_pixel(45, y);
 
-        framebuffer.set_pixel(55, y);
-        framebuffer.set_pixel(59, y);
+        framebuffer.set_pixel(54, y);
+        framebuffer.set_pixel(58, y);
     }
 
-    framebuffer.set_pixel(43, 55);
-    framebuffer.set_pixel(44, 56);
-    framebuffer.set_pixel(45, 55);
+    framebuffer.set_pixel(42, 55);
+    framebuffer.set_pixel(43, 56);
+    framebuffer.set_pixel(44, 55);
 
-    framebuffer.set_pixel(56, 55);
-    framebuffer.set_pixel(57, 56);
-    framebuffer.set_pixel(58, 55);
+    framebuffer.set_pixel(55, 55);
+    framebuffer.set_pixel(56, 56);
+    framebuffer.set_pixel(57, 55);
 
     //e
-    for x in 48..=53 {
+    for x in 47..=52 {
         framebuffer.set_pixel(x, 54);
         framebuffer.set_pixel(x, 58);
     }
 
-    for x in 50..=51 {
+    for x in 49..=50 {
         framebuffer.set_pixel(x, 55);
         framebuffer.set_pixel(x, 57);
     }
-    for x in 49..=52 {
+    for x in 48..=51 {
         framebuffer.set_pixel(x, 56);
     }
 
     //nave
-    for x in 48..=53 {
+    for x in 47..=52 {
         framebuffer.set_pixel(x, 63);
     }
-    for x in 50..=51 {
+    for x in 49..=50 {
         framebuffer.set_pixel(x, 62);
     }
-    framebuffer.set_pixel(49, 64);
-    framebuffer.set_pixel(52, 64);
-    framebuffer.set_pixel(49, 61);
-    framebuffer.set_pixel(52, 61);
+    framebuffer.set_pixel(48, 64);
+    framebuffer.set_pixel(51, 64);
+    framebuffer.set_pixel(48, 61);
+    framebuffer.set_pixel(51, 61);
 
     //corazon
-    for x in 46..=48 {
+    for x in 45..=47 {
         framebuffer.set_pixel(x, 50);
     }
-    for x in 53..=55 {
+    for x in 52..=54 {
         framebuffer.set_pixel(x, 50);
     }
-    framebuffer.set_pixel(47, 48);
-    framebuffer.set_pixel(54, 48);
-    framebuffer.set_pixel(48, 49);
-    framebuffer.set_pixel(55, 49);
-    framebuffer.set_pixel(47, 51);
-    framebuffer.set_pixel(54, 51);
+    framebuffer.set_pixel(46, 48);
+    framebuffer.set_pixel(53, 48);
+    framebuffer.set_pixel(47, 49);
+    framebuffer.set_pixel(54, 49);
+    framebuffer.set_pixel(46, 51);
+    framebuffer.set_pixel(53, 51);
 
     //cara
-    for x in 46..=55 {
+    for x in 45..=54 {
         framebuffer.set_pixel(x, 45);
     }
     for y in 37..=40 {
-        framebuffer.set_pixel(41, y);
-        framebuffer.set_pixel(60, y);
+        framebuffer.set_pixel(40, y);
+        framebuffer.set_pixel(59, y);
     }
-    framebuffer.set_pixel(42, 41);
-    framebuffer.set_pixel(43, 42);
-    framebuffer.set_pixel(44, 43);
-    framebuffer.set_pixel(45, 44);
-    framebuffer.set_pixel(56, 44);
-    framebuffer.set_pixel(57, 43);
-    framebuffer.set_pixel(58, 42);
-    framebuffer.set_pixel(59, 41);
+    framebuffer.set_pixel(41, 41);
+    framebuffer.set_pixel(42, 42);
+    framebuffer.set_pixel(43, 43);
+    framebuffer.set_pixel(44, 44);
+    framebuffer.set_pixel(55, 44);
+    framebuffer.set_pixel(56, 43);
+    framebuffer.set_pixel(57, 42);
+    framebuffer.set_pixel(58, 41);
 
-    for x in 48..=53 {
+    for x in 47..=52 {
         framebuffer.set_pixel(x, 42);
     }
-    for x in 45..=46 {
+    for x in 44..=45 {
         framebuffer.set_pixel(x, 37);
         framebuffer.set_pixel(x, 39);
     }
-    for x in 55..=56 {
+    for x in 54..=55 {
         framebuffer.set_pixel(x, 37);
         framebuffer.set_pixel(x, 39);
     }
 
-    framebuffer.set_pixel(44, 38);
-    framebuffer.set_pixel(47, 38);
-    framebuffer.set_pixel(54, 38);
-    framebuffer.set_pixel(57, 38);
+    framebuffer.set_pixel(43, 38);
+    framebuffer.set_pixel(46, 38);
+    framebuffer.set_pixel(53, 38);
+    framebuffer.set_pixel(56, 38);
 
     //gliders
     for x in 0..=1 {
@@ -253,7 +253,7 @@ fn main() {
     framebuffer.swap_buffers(&mut window, &raylib_thread, window_width, window_height);
 
     while !window.window_should_close() {
-        thread::sleep(Duration::from_millis(1020));
+        thread::sleep(Duration::from_millis(200));
 
         render(&mut framebuffer, framebuffer_width, framebuffer_height);
 
